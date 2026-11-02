@@ -45,7 +45,7 @@ Los ajustes de **HiFi2 forzado y DRE avanzado** proceden del driver QCloud recup
 En un LG V60 Timelm con Android 13 y la ruta de audio adaptada:
 
 - Arranque del kernel `4.19.325-v60-dop-lab3+`.
-- Reproducción de DSF DSD128 por la salida analógica, confirmada por el usuario como **limpia y continua**.
+- En nuestras pruebas conseguimos reproducción de DSF DSD128 por la salida analógica **limpia y continua**.
 - Portadora ALSA estéreo a **352.800 Hz, `S24_3LE`**, con backend MI2S a 352,8 kHz.
 - En una captura del buffer de salida de AudioFlinger: **1.920 de 1.920 tramas** con marcadores DoP correctos y alternantes.
 - **7.680 bytes de datos DSD** de ambos canales recuperados de ese buffer coincidieron con el DSF original, con **cero diferencias**.

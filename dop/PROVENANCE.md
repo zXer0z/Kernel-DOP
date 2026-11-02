@@ -31,7 +31,7 @@ El driver recuperado incluye decisiones previas de QCloud (entre ellas HiFi2 for
 
 ## Alcance de la evidencia
 
-El kernel se probó como parte de una solución de audio que también modifica componentes externos al kernel. La reproducción de DSF DSD128 fue confirmada limpia y continua por el usuario. La captura digital comprobó un fragmento de 1.920 tramas DoP y 7.680 bytes DSD coincidentes con el archivo fuente antes de la entrega al HAL. No mide el enlace eléctrico ni acredita todas las variantes de hardware o la pista completa como bit-perfect.
+Probamos el kernel como parte de una solución de audio que también modifica componentes externos al kernel. Conseguimos reproducción de DSF DSD128 limpia y continua. La captura digital comprobó un fragmento de 1.920 tramas DoP y 7.680 bytes DSD coincidentes con el archivo fuente antes de la entrega al HAL. No mide el enlace eléctrico ni acredita todas las variantes de hardware o la pista completa como bit-perfect.
 
 Referencia pública del transporte: https://dsd-guide.com/sites/default/files/white-papers/DoP_openStandard_1v1.pdf
 
