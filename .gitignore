@@ -141,3 +141,5 @@ kernel/configs/android-*.cfg
 Android.bp
 
 out/
+# Kernel-DOP reference build output
+/out-dop/
