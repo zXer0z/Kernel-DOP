@@ -982,9 +982,14 @@ EXPORT_SYMBOL_GPL(gether_get_qmult);
 
 int gether_get_ifname(struct net_device *net, char *name, int len)
 {
-	struct eth_dev *dev = netdev_priv(net);
+	struct eth_dev *dev;
 	int ret;
 
+	/* A configfs read must not panic if the backing interface is absent. */
+	if (!net)
+		return -ENODEV;
+
+	dev = netdev_priv(net);
 	rtnl_lock();
 	ret = scnprintf(name, len, "%s\n",
 			dev->ifname_set ? net->name : netdev_name(net));

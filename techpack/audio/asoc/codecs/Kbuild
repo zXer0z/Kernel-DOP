@@ -1,3 +1,7 @@
+# Legacy ESS variants retain unused routines/coefficients with this config.
+# Keep their warnings visible; do not relax errors for other drivers.
+CFLAGS_es9218p.o += -Wno-error=unused-function -Wno-error=unused-variable
+
 # We can build either as part of a standalone Kernel build or as
 # an external module.  Determine which mechanism is being used
 ifeq ($(MODNAME),)

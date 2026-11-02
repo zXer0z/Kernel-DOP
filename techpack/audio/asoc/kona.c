@@ -711,7 +711,7 @@ static const char *const auxpcm_rate_text[] = {"KHZ_8", "KHZ_16"};
 static char const *mi2s_rate_text[] = {"KHZ_8", "KHZ_11P025", "KHZ_16",
 				      "KHZ_22P05", "KHZ_32", "KHZ_44P1",
 #ifdef CONFIG_MACH_LGE
-				      "KHZ_48", "KHZ_88P2","KHZ_96", "KHZ_176P4", "KHZ_192", "KHZ_384"};
+				      "KHZ_48", "KHZ_88P2","KHZ_96", "KHZ_176P4", "KHZ_192", "KHZ_384", "KHZ_352P8"};
 #else
 				      "KHZ_48", "KHZ_88P2", "KHZ_96",
 				      "KHZ_176P4", "KHZ_192","KHZ_352P8",
@@ -2583,6 +2583,9 @@ static int mi2s_get_sample_rate(int value)
 	case 11:
 		sample_rate = SAMPLING_RATE_384KHZ;
 		break;
+	case 12:
+		sample_rate = SAMPLING_RATE_352P8KHZ;
+		break;
 #endif
 	default:
 		sample_rate = SAMPLING_RATE_48KHZ;
@@ -2651,6 +2654,9 @@ static int mi2s_get_sample_rate_val(int sample_rate)
 		break;
 	case SAMPLING_RATE_384KHZ:
 		sample_rate_val = 11;
+		break;
+	case SAMPLING_RATE_352P8KHZ:
+		sample_rate_val = 12;
 		break;
 #endif
 	default:
